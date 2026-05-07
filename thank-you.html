@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Confirmed — WildRoot Honey</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- ==========================================
+     META PIXEL — replace YOUR_PIXEL_ID
+     ========================================== -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID');
+fbq('track', 'Purchase', {currency: 'USD'});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=Purchase&noscript=1"/></noscript>
+
+<!-- ==========================================
+     GOOGLE TAG (GA4) — replace YOUR_GA4_ID
+     ========================================== -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA4_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'YOUR_GA4_ID');
+  gtag('event', 'purchase', { currency: 'USD' });
+</script>
+
+<style>
+:root{--bg:#080c08;--green:#a8e63d;--green-border:rgba(168,230,61,0.22);--white:#eef5e8;--muted:#5a6b4a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--white);font-family:'Space Grotesk',sans-serif;font-weight:300;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 24px;}
+.check{font-size:48px;margin-bottom:24px;}
+.label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--green);opacity:.7;margin-bottom:12px;}
+h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,8vw,96px);line-height:.95;letter-spacing:1px;margin-bottom:20px;}
+p{font-size:15px;color:rgba(238,245,232,0.55);line-height:1.8;max-width:420px;margin-bottom:40px;}
+.btn{display:inline-block;padding:14px 40px;border:1px solid var(--green);color:var(--green);font-family:'Space Grotesk',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:all .2s;}
+.btn:hover{background:var(--green);color:var(--bg);}
+.divider{width:1px;height:40px;background:var(--green-border);margin:40px auto;}
+.next{font-size:12px;color:var(--muted);letter-spacing:1px;}
+</style>
+</head>
+<body>
+
+<p class="label">Order Confirmed</p>
+<h1>Thank<br>You.</h1>
+<p>Your order is on its way. Check your email for confirmation and tracking details. Welcome to WildRoot.</p>
+<a class="btn" href="index.html">← Back to Store</a>
+<div class="divider"></div>
+<p class="next">Questions? <a href="mailto:support@wildroothoney.com" style="color:var(--green);text-decoration:none;">support@wildroothoney.com</a></p>
+
+</body>
+</html>

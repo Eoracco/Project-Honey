@@ -368,6 +368,32 @@ footer{
   footer{flex-direction:column;gap:20px;text-align:center;padding:32px 20px;}
 }
 </style>
+
+<!-- ==========================================
+     META PIXEL — replace YOUR_PIXEL_ID
+     ========================================== -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+
+<!-- ==========================================
+     GOOGLE TAG (GA4) — replace YOUR_GA4_ID
+     ========================================== -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA4_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'YOUR_GA4_ID');
+</script>
 </head>
 <body>
 
@@ -512,22 +538,22 @@ footer{
   <div class="reviews-grid">
     <div class="review-card">
       <div class="review-stars">★★★★★</div>
-      <p class="review-text">"Wife noticed a difference before I did. More drive, more stamina — I've been taking this every few days and I'm not stopping."</p>
+      <p class="review-text">"More energy, sharper focus, better recovery. This has replaced my morning coffee and pre-workout. I'm not going back."</p>
       <div class="review-name">Marcus T.</div><div class="review-loc">Construction, Los Angeles</div>
     </div>
     <div class="review-card">
       <div class="review-stars">★★★★★</div>
-      <p class="review-text">"I bought this for the gym but honestly the bedroom performance boost is what kept me reordering. Natural, clean, no side effects."</p>
+      <p class="review-text">"Tongkat Ali and Ginseng in a honey base — the energy lasts all day with zero crash. My gym sessions are on a different level."</p>
       <div class="review-name">Derek S.</div><div class="review-loc">Personal Trainer, Phoenix</div>
     </div>
     <div class="review-card">
       <div class="review-stars">★★★★★</div>
-      <p class="review-text">"My girlfriend asked what changed. Told her it's just honey. She doesn't need to know the details — she just wants me to keep buying it."</p>
+      <p class="review-text">"Replaced my 3pm coffee with this. The focus is sharper and I actually sleep better at night. Natural is the way."</p>
       <div class="review-name">James R.</div><div class="review-loc">Entrepreneur, Dallas</div>
     </div>
     <div class="review-card">
       <div class="review-stars">★★★★★</div>
-      <p class="review-text">"The Tongkat Ali hits different when it's in a honey base. Endurance in every part of my life is up. This is a permanent part of my routine."</p>
+      <p class="review-text">"Been using Tripleshot for 3 months. Physical performance and recovery are both up. Cleanest natural supplement I've found."</p>
       <div class="review-name">Kevin M.</div><div class="review-loc">CrossFit Coach, Houston</div>
     </div>
   </div>

@@ -273,6 +273,32 @@ footer{
   footer{flex-direction:column;gap:20px;text-align:center;padding:32px 20px;}
 }
 </style>
+
+<!-- ==========================================
+     META PIXEL — replace YOUR_PIXEL_ID
+     ========================================== -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+
+<!-- ==========================================
+     GOOGLE TAG (GA4) — replace YOUR_GA4_ID
+     ========================================== -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA4_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'YOUR_GA4_ID');
+</script>
 </head>
 <body>
 
@@ -383,22 +409,22 @@ footer{
     <div class="review-list">
       <div class="rev-card">
         <div class="rev-stars">★★★★★</div>
-        <p class="rev-text">"I take one sachet before the weekend. My wife calls it my 'secret weapon.' Whatever's in this — keep making it."</p>
+        <p class="rev-text">"VIP is on a completely different level. Royal Jelly and the botanical blend hit hard — energy, focus, and drive all dialed in."</p>
         <div class="rev-author">Michael C.</div><div class="rev-role">Executive, San Francisco</div>
       </div>
       <div class="rev-card">
         <div class="rev-stars">★★★★★</div>
-        <p class="rev-text">"Two hours after taking VIP I feel like I'm 25 again. The energy, the drive, the performance — everything is dialed in. Nothing else comes close."</p>
+        <p class="rev-text">"Two hours after taking VIP everything is dialed in. Energy, clarity, physical output — I've tried everything and nothing comes close to this."</p>
         <div class="rev-author">Andre W.</div><div class="rev-role">Athlete, Miami</div>
       </div>
       <div class="rev-card">
         <div class="rev-stars">★★★★★</div>
-        <p class="rev-text">"I gift these to close friends who need a boost but won't admit it. Every single one comes back asking where to get more."</p>
+        <p class="rev-text">"Most premium wellness product I've come across. Natural, effective, and I gift these to people I want to impress. Everyone asks where to get more."</p>
         <div class="rev-author">Raymond L.</div><div class="rev-role">Verified Customer, Houston</div>
       </div>
       <div class="rev-card">
         <div class="rev-stars">★★★★★</div>
-        <p class="rev-text">"Royal Jelly, Tongkat Ali, all in one sachet. My doctor doesn't know I'm on this — he just says my energy levels look great. I'll keep my secret."</p>
+        <p class="rev-text">"I work brutal hours and this keeps me running at full capacity. Nothing artificial, no side effects — just premium natural energy. VIP for a reason."</p>
         <div class="rev-author">David T.</div><div class="rev-role">Surgeon, New York</div>
       </div>
     </div>
