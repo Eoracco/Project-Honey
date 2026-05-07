@@ -3,6 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Destructive Tower VIP by WildRoot Honey — Premium honey formula with Royal Jelly, Bee Pollen & Rainforest Botanical Extract. 12 sachets × 20g.">
+<meta name="keywords" content="vip honey, royal jelly honey, mens wellness honey, premium honey supplement, wildroot vip">
+<meta property="og:title" content="Destructive Tower VIP — WildRoot Honey">
+<meta property="og:description" content="Our most concentrated formula. Pure honey fortified with Royal Jelly and premium rainforest botanical extract. For men who demand the best.">
+<meta property="og:type" content="product">
+<meta property="og:image" content="asset/vip_product.png">
+<meta property="og:url" content="https://wildroothoney.com/vip_page.html">
+<meta property="product:price:amount" content="68.00">
+<meta property="product:price:currency" content="USD">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Destructive Tower VIP — WildRoot Honey">
+<meta name="twitter:description" content="Our most concentrated formula. Royal Jelly, Bee Pollen & Rainforest Botanical Extract. 12 sachets × 20g.">
+<meta name="twitter:image" content="asset/vip_product.png">
 <title>Destructive Tower VIP — WildRoot Honey</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -235,6 +248,7 @@ footer{
 .footer-disclaimer-vip{font-size:11px;color:var(--muted);max-width:480px;text-align:center;line-height:1.6;}
 .footer-link{font-size:12px;color:var(--muted);text-decoration:none;transition:color .2s;}
 .footer-link:hover{color:var(--silver);}
+.footer-links-row{display:flex;flex-wrap:wrap;gap:16px;align-items:center;}
 
 /* TOAST */
 .toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(70px);z-index:999;padding:14px 28px;background:#130606;border:1px solid var(--crimson-bright);color:var(--off-white);font-size:13px;letter-spacing:1px;transition:transform .3s;pointer-events:none;white-space:nowrap;}
@@ -265,7 +279,7 @@ footer{
 <nav>
   <a class="nav-back" href="index.html">← All Products</a>
   <div class="nav-brand">WildRoot</div>
-  <button class="nav-cta" onclick="document.getElementById('buy').scrollIntoView({behavior:'smooth'})">Buy — $68</button>
+  <button class="nav-cta" onclick="window.location.href=\"https://buy.stripe.com/5kQfZjgEQ1nEd1SdSJc7u01\"">Buy — $68</button>
 </nav>
 
 <!-- HERO: LEFT IMAGE + RIGHT CONTENT -->
@@ -303,7 +317,7 @@ footer{
       <div class="hero-price">$68</div>
       <div class="hero-price-detail">12 sachets × 20g<br>Free US shipping $80+</div>
     </div>
-    <button class="btn-primary" onclick="document.getElementById('buy').scrollIntoView({behavior:'smooth'})">Purchase — $68.00</button>
+    <button class="btn-primary" onclick="window.location.href=\"https://buy.stripe.com/5kQfZjgEQ1nEd1SdSJc7u01\"">Purchase — $68.00</button>
   </div>
 
 </section>
@@ -422,7 +436,13 @@ footer{
 <footer>
   <div class="footer-brand-vip">WildRoot Honey</div>
   <p class="footer-disclaimer-vip">These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease. Consult your healthcare provider before use.</p>
-  <a class="footer-link" href="index.html">← All Products</a>
+  <div class="footer-links-row">
+    <a class="footer-link" href="index.html">← All Products</a>
+    <a class="footer-link" href="privacy.html">Privacy</a>
+    <a class="footer-link" href="terms.html">Terms</a>
+    <a class="footer-link" href="refund.html">Refunds</a>
+    <a class="footer-link" href="shipping.html">Shipping</a>
+  </div>
 </footer>
 
 <div class="toast" id="toast-vip">✓ Added to cart</div>
