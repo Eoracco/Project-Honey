@@ -88,7 +88,7 @@ nav{
 .product-img{
   max-height:80%;max-width:100%;display:block;object-fit:contain;
   filter:brightness(0.93)contrast(1.06)saturate(1.1);
-  position:relative;z-index:1;transition:transform .5s ease;
+  position:relative;z-index:1;transition:transform .5s ease, opacity .25s ease;
 }
 .hero-img-side:hover .product-img{transform:scale(1.04);}
 .corner{position:absolute;width:22px;height:22px;border-color:var(--gold);border-style:solid;opacity:.4;z-index:2;}
@@ -96,6 +96,17 @@ nav{
 .corner.tr{top:24px;right:24px;border-width:2px 2px 0 0;}
 .corner.bl{bottom:24px;left:24px;border-width:0 0 2px 2px;}
 .corner.br{bottom:24px;right:24px;border-width:0 2px 2px 0;}
+.gallery-thumbs-vip{
+  position:absolute;bottom:24px;left:50%;transform:translateX(-50%);
+  display:flex;gap:10px;z-index:3;
+}
+.gallery-thumb-vip{
+  width:56px;height:56px;border:2px solid rgba(196,153,58,0.25);
+  cursor:pointer;overflow:hidden;transition:all .3s;
+  opacity:.6;background:#130606;
+}
+.gallery-thumb-vip:hover,.gallery-thumb-vip.active{border-color:var(--gold);opacity:1;box-shadow:0 0 12px rgba(196,153,58,0.3);}
+.gallery-thumb-vip img{width:100%;height:100%;object-fit:cover;}
 
 /* RIGHT content */
 .hero-content{
@@ -318,6 +329,12 @@ src="https://www.facebook.com/tr?id=2049059129381117&ev=PageView&noscript=1"/></
     <div class="corner bl"></div>
     <div class="corner br"></div>
     <img class="product-img" id="product-img-vip" src="asset/vip_product.png" alt="Destructive Tower VIP Honey">
+    <div class="gallery-thumbs-vip">
+      <div class="gallery-thumb-vip active" onclick="switchImgVip(this,'asset/vip_product.png')"><img src="asset/vip_product.png" alt="VIP Box"></div>
+      <div class="gallery-thumb-vip" onclick="switchImgVip(this,'asset/ChatGPT Image May 7, 2026, 10_43_35 AM.png')"><img src="asset/ChatGPT Image May 7, 2026, 10_43_35 AM.png" alt="VIP Collection"></div>
+      <div class="gallery-thumb-vip" onclick="switchImgVip(this,'asset/ChatGPT Image May 7, 2026, 10_37_40 AM.png')"><img src="asset/ChatGPT Image May 7, 2026, 10_37_40 AM.png" alt="VIP Studio"></div>
+      <div class="gallery-thumb-vip" onclick="switchImgVip(this,'asset/ChatGPT Image May 7, 2026, 10_32_20 AM.png')"><img src="asset/ChatGPT Image May 7, 2026, 10_32_20 AM.png" alt="VIP Detail"></div>
+    </div>
   </div>
 
   <!-- RIGHT: content -->
@@ -474,6 +491,13 @@ src="https://www.facebook.com/tr?id=2049059129381117&ev=PageView&noscript=1"/></
 <div class="toast" id="toast-vip">✓ Added to cart</div>
 
 <script>
+function switchImgVip(el,src){
+  var img=document.getElementById('product-img-vip');
+  img.style.opacity='0';
+  setTimeout(function(){img.src=src;img.style.opacity='1';},250);
+  document.querySelectorAll('.gallery-thumb-vip').forEach(function(t){t.classList.remove('active');});
+  el.classList.add('active');
+}
 function checkout(){
   window.location.href = "https://buy.stripe.com/5kQfZjgEQ1nEd1SdSJc7u01";
 }
