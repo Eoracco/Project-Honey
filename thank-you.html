@@ -32,7 +32,10 @@ src="https://www.facebook.com/tr?id=2049059129381117&ev=PageView&noscript=1"/></
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-LNKNPDSEBJ');
+  gtag('config', 'AW-18030883032');   /* Google Ads — purchase conversion */
 </script>
+
+<script src="/asset/tracking.js"></script>
 
 <!-- ==========================================
      WILDROOT PURCHASE CONVERSION
@@ -73,15 +76,12 @@ src="https://www.facebook.com/tr?id=2049059129381117&ev=PageView&noscript=1"/></
   /* GUARD 1 — no purchase context at all: someone just opened /thank-you. */
   if (!(value > 0)) return;
 
-  /* GUARD 2 — dedupe refresh / back-nav / re-open. localStorage so a reopened
-     tab does not double-count the same order. */
+  /* GUARD 2 — dedupe refresh / back-nav / re-open, keyed on the order id. */
   if (!txId) txId = 'wr_' + (sku || 'unknown') + '_' + value;
-  var key = 'wr_purchase_sent_' + txId;
-  try {
-    if (localStorage.getItem(key)) return;
-    localStorage.setItem(key, '1');
-  } catch(e){}
+  if (WRTracking.hasReported(txId)) return;
   try { sessionStorage.removeItem('wr_pending_purchase'); } catch(e){}
+
+  var items = [{ item_id: sku || 'unknown', item_name: name || sku || '', price: value, quantity: 1 }];
 
   fbq('track', 'Purchase', {
     content_ids:  sku ? [sku] : [],
@@ -92,12 +92,10 @@ src="https://www.facebook.com/tr?id=2049059129381117&ev=PageView&noscript=1"/></
     num_items:    1
   }, { eventID: txId });
 
-  gtag('event', 'purchase', {
-    transaction_id: txId,
-    value:          value,
-    currency:       'USD',
-    items: [{ item_id: sku || 'unknown', item_name: name || sku || '', price: value, quantity: 1 }]
-  });
+  WRTracking.reportGa4Purchase({ transactionId: txId, value: value, currency: 'USD', items: items });
+  WRTracking.reportAdsPurchase({ transactionId: txId, value: value, currency: 'USD' });
+
+  WRTracking.markReported(txId);
 })();
 </script>
 
